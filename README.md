@@ -136,6 +136,12 @@ The function of scripts in the `src` directory:
     gunicorn --bind 127.0.0.1:9696 predict:app
     ```
 
+    If the above command does not work dispite gunicorn being install try this instaed:
+
+    ```bash
+    python -m gunicorn --bind 127.0.0.1:9696 predict:app
+    ```
+    
 1) Run the test script:
 
     ```bash

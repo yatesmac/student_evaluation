@@ -8,3 +8,6 @@
 2024-11-25 00:33:13,089 Saving the model and data vectorizer as a pickle file
 2024-11-25 00:33:13,090 Model saved successfully to ../models/dv_model.pkl 
 
+2024-11-24 23:11:42,766 Training the final model using Logistic Regression with cross validation.
+2024-11-24 23:11:43,412 ROC AUC on test dataset = 0.8237944969444704 
+
