@@ -76,7 +76,7 @@ The target variable in the dataset is Exam_Score. For binary classification, sco
     ├── models
     │   └── model.pkl
     ├── notebooks
-    │   └── student_perfomance.ipynb
+    │   └── student_evaluation.ipynb
     ├── README.md
     ├── requirements.txt
     └── src
@@ -99,6 +99,8 @@ The function of scripts in the `src` directory:
 
 ## Project Setup
 
+Note: This project was developed using Ubuntu. As such the code snippets below work in Linux-based environments. The Microsoft Windows implementation may differ.
+
 ### To reproduce the project (without Docker)
 
 1) Clone this repo in your local machine with the command:
@@ -116,7 +118,7 @@ The function of scripts in the `src` directory:
     source env/bin/activate
     ```
 
-1) Install dependancies
+1) Install dependencies
 
     ```bash
     pip install -r requirements.txt
@@ -136,7 +138,7 @@ The function of scripts in the `src` directory:
     gunicorn --bind 127.0.0.1:9696 predict:app
     ```
 
-    If the above command does not work dispite gunicorn being install try this instaed:
+    If the above command does not work despite gunicorn being install try this instead:
 
     ```bash
     python -m gunicorn --bind 127.0.0.1:9696 predict:app
@@ -175,7 +177,7 @@ The function of scripts in the `src` directory:
 
 ## Results and Evaluation
 
-Five models: Logistic Regression, Decision Tree, Random Rorest, Gradient Boosting and XGboost were trained on the dataset. Parameter tuning was done for each model and Logistic Regression was found to be the best performing model.
+Five models: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting and XGboost were trained on the dataset. Parameter tuning was done for each model and Logistic Regression was found to be the best performing model.
 
 The Logistic Regression model was thus train on the training and validation datasets, then saved. Afterwards, it was loaded into a webservice using Flask and deployed using a docker container.
 
