@@ -3,24 +3,40 @@
 
 ![Dataset Cover](/img/dataset_cover.jpg)
 
+<!-- TOC -->
+
+- [Project Description](#project-description)
+- [About the Dataset](#about-the-dataset)
+    - [Column Descriptions](#column-descriptions)
+    - [Target Variable](#target-variable)
+- [Project Structure](#project-structure)
+- [Project Setup](#project-setup)
+    - [To reproduce the project without Docker](#to-reproduce-the-project-without-docker)
+- [Containerization](#containerization)
+    - [To reproduce the project with Docker](#to-reproduce-the-project-with-docker)
+- [Results and Evaluation](#results-and-evaluation)
+- [Acknowledgements](#acknowledgements)
+
+<!-- /TOC -->
+
 ## Project Description
 
 The goal of this project is to assess student performance based on a number of factors. This is a binary classification problem. The aim is to class students who receive a grade of 65 and above (Above Average) or below 65 (Below Average).
 
 The project involves the following steps:
 
-- exploring the data and splitting the data into datasets to be used in training;
-- training the following machine learning models and tuning their parameters:
+- Exploring the data and splitting the data into datasets to be used in training;
+- Training the following machine learning models and tuning their parameters:
 
-    - Logistic Regression,
-    - Decision Tree Classifier,
-    - Random Forest Classifier,
-    - XGBoost Classifier, and
-    - Gradient Boosting Classifier;
+  - Logistic Regression
+  - Decision Tree Classifier
+  - Random Forest Classifier
+  - XGBoost Classifier
+  - Gradient Boosting Classifier
 
-- evaluating the models and selecting the most performant one;
-- creating a web application with the final model using Flask and Gunicorn;
-- deploying the model locally with Docker.
+- Evaluating the models and selecting the most performant one;
+- Creating a web application with the final model using Flask and Gunicorn;
+- Deploying the model locally with Docker.
 
 ## About the Dataset
 
@@ -106,7 +122,7 @@ Note: This project was developed using Ubuntu. As such the code snippets below w
 1) Clone this repo in your local machine with the command:
 
     ```bash
-    git clone https://github.com/
+    git clone https://github.com/yatesmac/student_evaluation.git
     ```
 
 1) Use the `cd` command to navigate to the main directory of the project `student_evaluation`
@@ -143,7 +159,7 @@ Note: This project was developed using Ubuntu. As such the code snippets below w
     ```bash
     python -m gunicorn --bind 127.0.0.1:9696 predict:app
     ```
-    
+
 1) Run the test script:
 
     ```bash
